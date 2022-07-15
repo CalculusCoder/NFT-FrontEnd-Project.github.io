@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d40d7e68f3.js" crossorigin="anonymous"></script>
+    <title>NFT Website</title>
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h1 id="navbar-logo">NFT Brother's</h1>
+            <div class="navbar-toggle" id="mobile-menu"> 
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-items">
+                    <a href="#home" class="navbar-links">Home</a>
+                </li>
+                <li class="navbar-items">
+                    <a href="#about" class="navbar-links">Explore</a>
+                </li>
+                <!-- SIGNUP BUTTON AND MODAL-->
+                <li class="navbar-signUp"> 
+                    <button data-modal-target="#modal" class="button">Sign Up</button>
+                    <div class="modal" id="modal">
+                        <div class="modal-header">
+                            <div class="title">Sign Up Today!</div>
+                            <button data-close-button class="close-button close">X</button>
+                        </div>
+                    <div class="modal-body">    <!--Modal Body div, VALIDATION FORM -->
+                        <form class="form" id="form">
+                            <!-- Name -->
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="John Doe" required minlength="3" maxlength="50" name="name">
+                            </div>
+                            <!-- Phone# -->
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="555-555-5555" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone">
+                            </div>    
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="JohnDoe@gmail.com" required name="email">
+                            </div>
+                            <!-- Password -->
+                            <div class="form-group">
+                                <label for="password1">Enter Password</label>
+                                <input type="password" id="password1" placeholder="Min. 8 Characters" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number.">
+                            </div>
+                            <!-- Confirm Password -->
+                            <div class="form-group">
+                                <label for="password2">Confirm Password</label>
+                                <input type="password" id="password2" placeholder="Confirm Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" name="password">
+                            </div>
+                            <button class="register-btn" type="submit">Register!</button>
+                        </form>
+                        <!-- Message -->
+                        <div class="message-container">
+                            <h3 id="message">Financial Freedom Awaits, Register Now!</h3>
+                        </div>
+                    </div>   <!--Modal Body div--> 
+                        <div class="overlay2"></div>
+                        <video class="video" src="video/video-2.mp4" muted loop autoplay></video>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+ 
+    <!-- WELCOME SECTION/HOME PAGE -->
+    <div class="main" id="home">
+        <div class="main-container">
+            <div class="main-content">
+                <h1>Financial <span class="text-highlight">Freedom </span>Awaits</h1>
+                <p class="nft"><span class="text-highlight">Discover</span> Our <span class="text-highlight">NFTs</span> Below</p>
+                <button class="main-btn"><a href="#about" class="view-collection">View Collection</a></button>
+            </div>
+            <div class="main-img-container">
+                <img src="images/dog.png" alt="dog" id="main-image">
+            </div>
+        </div>
+    </div>
+    
+    <!-- CARD SECTION WITH IMAGES -->
+    <div class="images" id="about">
+        <h1>Explore Our Collection</h1>
+        <div class="images-container">
+            <div class="images-card party-dog">
+                <h2>Party Dog</h2>
+                <i class="fa-brands fa-bitcoin"> 1.30</i>
+            </div>
+            <div class="images-card gold-ape">
+                <h2>Gold Ape</h2>
+                <i class="fa-brands fa-bitcoin"> 10.55</i>
+            </div>
+            <div class="images-card moscow-ape">
+                <h2>Moscow Ape</h2>
+                <i class="fa-brands fa-bitcoin"> 2.05</i>
+            </div>
+            <div class="images-card cat">
+                <h2>Cool Cat</h2>
+                <i class="fa-brands fa-bitcoin"> 0.90</i>
+            </div>
+            <div class="images-card dog">
+                <h2>Dancing Dog</h2>
+                <i class="fa-brands fa-bitcoin"> 2.88</i>
+            </div>
+            <div class="images-card sticky-ape">
+                <h2>Sticky Ape</h2>
+                <i class="fa-brands fa-bitcoin"> 0.34</i>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-container">
+        <p class="footer-text">NFT Brother's 2022. All Rights Reserved</p>
+    </div>
+    <div id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
